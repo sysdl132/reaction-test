@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://c6ip2cobd6ugx"]
+
+[ext_resource type="Script" uid="uid://b7eeoqaaefplj" path="res://main.gd" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=1176081014]
+script = ExtResource("1_ig7tw")
+
+[node name="StartMenu" type="Control" parent="." unique_id=1555628556]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="StartMenu" unique_id=935228433]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 60.0
+offset_right = 303.0
+offset_bottom = 110.0
+text = "Reaction Test
+使用方向键，别让方块溜出绿色区域！"
+horizontal_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="StartMenu" unique_id=1346023565]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 152.0
+offset_right = 216.0
+offset_bottom = 175.0
+horizontal_alignment = 1
+max_lines_visible = 1
+
+[node name="StartButton" type="Button" parent="StartMenu" unique_id=818301313]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 207.0
+offset_right = 207.0
+offset_bottom = 243.0
+text = "Go"
+
+[node name="Label" type="Label" parent="StartMenu" unique_id=370873922]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 580.0
+offset_right = 325.0
+offset_bottom = 629.0
+text = "created by doubao and jin(sysdl132)
+v1.01"
+horizontal_alignment = 1
+
+[node name="GameUI" type="Control" parent="." unique_id=159760189]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScoreLabel" type="Label" parent="GameUI" unique_id=1844212871]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 10.0
+offset_right = 97.0
+offset_bottom = 33.0
+
+[node name="SpeedLabel" type="Label" parent="GameUI" unique_id=509778391]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 11.0
+offset_right = 398.0
+offset_bottom = 34.0
+
+[node name="GameArea" type="ColorRect" parent="GameUI" unique_id=673176870]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = 34.0
+offset_right = 391.0
+offset_bottom = 634.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.24659455, 0.59128, 0, 1)
+
+[node name="GameOverUI" type="Control" parent="." unique_id=1176955554]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FinalScore" type="Label" parent="GameOverUI" unique_id=652398413]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 88.0
+offset_right = 191.0
+offset_bottom = 111.0
+
+[node name="FinalSpeed" type="Label" parent="GameOverUI" unique_id=1560113752]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 111.0
+offset_right = 191.0
+offset_bottom = 134.0
+
+[node name="BestScore" type="Label" parent="GameOverUI" unique_id=1153319834]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 136.0
+offset_right = 191.0
+offset_bottom = 159.0
+
+[node name="NewRecord" type="Label" parent="GameOverUI" unique_id=802834370]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 158.0
+offset_right = 191.0
+offset_bottom = 181.0
+
+[node name="BackButton" type="Button" parent="GameOverUI" unique_id=1837170313]
+layout_mode = 0
+offset_left = 138.0
+offset_top = 206.0
+offset_right = 209.0
+offset_bottom = 238.0
+text = "返回"
+
+[connection signal="pressed" from="StartMenu/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="GameOverUI/BackButton" to="." method="_on_back_button_pressed"]
